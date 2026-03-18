@@ -1,0 +1,38 @@
+class jogador:
+    def __init__(self, nome, pontos):
+        self.nome = nome
+        self.pontos = pontos
+
+    def ganhar(self):
+        self = self.pontos + 3
+        return self
+    
+    def perder(self):
+        self = self.pontos - 3
+        return self
+
+
+jogador1 = jogador("C", 0)
+jogador2 = jogador("N", 0)
+
+num_rodadas = int(input("Quantas rodadas a partida terá?"))
+rodadas =+ 1
+
+for i in range(num_rodadas):
+ GANHADOR = str(input("Quem ganhou pontos?"))
+
+ if GANHADOR == (jogador1.nome):
+            print (jogador1.nome,"ganhou 3 pontos e está com", jogador1.ganhar(),"pontos!")
+            if jogador2.pontos < 0 or jogador1.pontos == 0:
+             print(jogador2.nome,"perdeu 3 pontos e está com", (jogador2.pontos + jogador2.pontos),"pontos.")
+            else:
+             print(jogador2.nome,"perdeu 3 pontos e está com", jogador2.perder(),"pontos.")
+ elif GANHADOR == (jogador2.nome):
+             print (jogador2.nome,"ganhou 3 pontos e está com", jogador2.ganhar(),"pontos!",)
+             if jogador1.pontos < 0 or jogador1.pontos == 0:
+              print(jogador1.nome,"perdeu 3 pontos e está com",(jogador1.pontos + jogador1.pontos) ,"pontos.")
+             else:
+              print(jogador1.nome,"perdeu 3 pontos e está com", jogador1.perder(),"pontos.")
+ else:
+            print("Este jogador não existe.")
+            
